@@ -15,7 +15,6 @@ const getWalletBalance = async (publicKeyFromCLI) => {
         const walletBalance = await connection.getBalance(
             new PublicKey(publicKeyFromCLI)
         );
-        console.log(parseInt(walletBalance));
         console.log(`Wallet balance: ${parseInt(walletBalance) / LAMPORTS_PER_SOL} SOL`);
     } catch (err) {
         console.log(err);
